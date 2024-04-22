@@ -1,0 +1,19 @@
+{
+	"name": "oktayaydogan/test-project",
+	"autoload": {
+		"psr-4": {
+			"Oktayaydogan\\TestProject\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Oktay Aydoğan",
+			"email": "aydoganooktay@gmail.com"
+		}
+	],
+	"require": {
+		"smarty/smarty": "^5.0",
+		"aura/router": "^3.3",
+		"bramus/router": "^1.6"
+	}
+}
