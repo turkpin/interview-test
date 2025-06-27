@@ -43,7 +43,7 @@ Mevcut web uygulamasına Turkpin Bayi API'sini entegre ederek, dinamik oyun ve �
 ### 1. Projeyi Klonlayın
 ```bash
 git clone https://github.com/turkpin/interview-test.git
-cd test-project
+cd interview-test
 ```
 
 ### 2. Bağımlılıkları Yükleyin
