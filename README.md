@@ -197,7 +197,7 @@ C: Evet, iyileştirmeler yapabilirsiniz ancak temel yapıyı koruyun.
 **S: Ek kütüphane ekleyebilir miyim?**  
 C: Evet, gerekçeli olarak yeni bağımlılıklar ekleyebilirsiniz.
 
-## 📞 İletişim ve Destek
+## İletişim ve Destek
 
 ### Teknik Destek
 - **E-posta**: `integration@turkpin.com`
