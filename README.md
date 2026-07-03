@@ -160,13 +160,41 @@ composer install
 5. **Bildirim**: PR linkini `integration@turkpin.com` adresine gönderin
 
 ### Commit Standartları
-```bash
-feat: oyun listesi API entegrasyonu
-fix: sipariş formu validasyonu
-docs: API dokümantasyonu güncellendi
-style: code formatting düzeltmeleri
-refactor: router yapısı iyileştirildi
+### Format
+
 ```
+(type) scope: description
+```
+
+```
+(type) description
+```
+
+belki
+
+```
+scope: description
+```
+
+`type` ve `scope` alanları, değişikliği sınıflandırmak için kullanılır; `description` alanı ise değişikliği açıklar.
+
+### Örnekler
+
+- `(chore) env: remove unused environment variables`
+
+- `(docs) readme: add setup instructions for Docker`
+
+- `(feat) auth: add two-factor authentication`
+
+- `(fix) api: return correct status code on failure`
+
+- `(perf) db: cache user queries for faster lookup`
+
+- `(refactor) router: remove unused route middleware`
+
+- `(style) button: fix indentation and spacing`
+
+- `(test) auth: add tests for token expiration`
 
 ## Kaynaklar
 
@@ -175,6 +203,8 @@ refactor: router yapısı iyileştirildi
 - [PHP Best Practices](https://www.php-fig.org/)
 - [Smarty Template Engine](https://www.smarty.net/docs/)
 - [Bootstrap 5 Dokümantasyonu](https://getbootstrap.com/docs/5.3/)
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [How to Write a Git Commit Message](https://cbea.ms/git-commit/)
 
 ### Yararlı Linkler
 - [Composer Dokümantasyonu](https://getcomposer.org/doc/)
