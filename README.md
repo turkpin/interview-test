@@ -13,188 +13,257 @@
 
 ## Turkpin Hakkında
 
-Turkpin, Türkiye'nin önde gelen dijital ürün ve hizmet sağlayıcısıdır. Oyun kodları, dijital içerikler ve çeşitli online hizmetlerde güvenilir çözümler sunmaktayız. Bayilerimize sunduğumuz API altyapısı ile entegrasyon hizmetleri vermekte ve bu alanda sürekli gelişim göstermekteyiz.
+Turkpin; e-pin, hediye kartı ve dijital ürün satışları konusunda uzmanlaşmış bir dijital ticaret şirketidir.
 
-## Proje Amacı
+Kendi e-ticaret platformlarımızı, ödeme altyapılarımızı, API entegrasyonlarımızı ve kimlik doğrulama teknolojilerimizi geliştiriyor ve işletiyoruz.
 
-Bu proje, yazılım geliştirici adaylarımızın teknik yetkinliklerini ve problem çözme becerilerini değerlendirmek amacıyla hazırlanmıştır. Gerçek iş süreçlerimizde kullandığımız API'lerin entegrasyonu ve frontend geliştirme becerilerini test etmektedir.
+### Geliştirdiğimiz Çözümler
 
-## Proje Genel Bakış
+* **Dijital ürün ve e-pin altyapıları:** Dijital ürünlerin yüksek hacimde yönetilmesi ve teslim edilmesi için uçtan uca sistemler
+* **Hediye kartı ve oyun entegrasyonları:** Global oyun ve eğlence platformları için katalog ve ürün teslimat altyapıları
+* **B2B API çözümleri:** İş ortaklarının Turkpin hizmetlerini kendi sistemlerine entegre etmesini sağlayan API'ler
+* **Ödeme ve sipariş yönetimi:** Ödeme işlemleri, sipariş yaşam döngüsü ve mutabakat sistemleri
+* **Kimlik doğrulama ve sahtecilik önleme:** Kullanıcı ve platform güvenliğini destekleyen doğrulama ve risk kontrol sistemleri
+* **Bulut tabanlı yazılım platformları:** Yüksek erişilebilirlik ve ölçeklenebilirlik için geliştirilen bulut tabanlı servisler
 
-Mevcut web uygulamasına Turkpin Bayi API'sini entegre ederek, dinamik oyun ve ürün listeleme sistemi ile sipariş yönetimi geliştirmeniz beklenmektedir.
+## Projenin Amacı
 
-### Mevcut Proje Yapısı
-- **Backend**: PHP 8.x, Composer, PSR-4 autoloading
-- **Template Engine**: Smarty
-- **Frontend**: Bootstrap 5, Vanilla JavaScript
-- **Routing**: Bramus Router
-- **Çoklu Dil Desteği**: TR/EN
+Bu proje ile adayın aşağıdaki konulardaki yetkinlikleri değerlendirilecektir:
 
-## Sistem Gereksinimleri
+* Mevcut bir projeyi analiz etme
+* Harici API entegrasyonu geliştirme
+* PHP ve JavaScript ile uygulama geliştirme
+* Hata senaryolarını yönetme
+* Kullanıcı deneyimini iyileştirme
+* Temiz, güvenli ve sürdürülebilir kod yazma
 
-- **PHP**: 8.0 veya üzeri
-- **Composer**: 2.x
-- **Web Server**: Apache/Nginx
-- **İnternet Bağlantısı**: API erişimi için gerekli
-- **IP Whitelisting**: Test API'si için gerekli
+Bu kapsamda, mevcut web uygulamasına Turkpin Bayi API'sinin entegre edilmesi beklenmektedir.
+
+## Test Projesinin Teknoloji Yapısı
+
+* **Backend:** PHP 8.x
+* **Bağımlılık Yönetimi:** Composer
+* **Autoloading:** PSR-4
+* **Template Engine:** Smarty
+* **Frontend:** Bootstrap 5 ve Vanilla JavaScript
+* **Routing:** Bramus Router
+* **Dil Desteği:** Türkçe ve İngilizce
+
+Turkpin projelerinde genel olarak PHP, JavaScript, TypeScript, React, Next.js, MySQL, Redis, Docker, Google Cloud ve REST API teknolojileri kullanılmaktadır. Ancak bu test projesinde mevcut teknoloji yapısının korunması beklenmektedir.
 
 ## Kurulum
 
-### 1. Projeyi Forklayın
-- Bu repository'yi kendi GitHub hesabınıza fork edin
-- Fork ettiğiniz repository'yi klonlayın
+### 1. Repository'yi Forklayın
+
+Bu repository'yi kendi GitHub hesabınıza fork edin ve ardından bilgisayarınıza klonlayın.
+
 ```bash
 git clone https://github.com/kullaniciadi/interview-test.git
 cd interview-test
 ```
 
 ### 2. Bağımlılıkları Yükleyin
+
 ```bash
 composer install
 ```
 
-### 3. Web Server Yapılandırması
-- Document root'u proje klasörüne ayarlayın
-- PHP'nin çalıştığından emin olun
-- `mod_rewrite` modülünün aktif olduğunu kontrol edin
+### 3. Web Server Yapılandırmasını Yapın
 
-### 4. API Erişimi
-- IP adresinizi `integration@turkpin.com` adresine gönderin
-- Whitelist işlemi tamamlandıktan sonra API'yi kullanabilirsiniz
+* Document root ayarını projenin giriş noktasına göre yapılandırın.
+* PHP'nin çalıştığından emin olun.
+* Apache kullanıyorsanız `mod_rewrite` modülünü aktif edin.
 
-## API Dokümantasyonu
+### 4. API Erişimi Talep Edin
 
-### Test Ortamı Bilgileri
-- **API URL**: `https://www.turkpin.net/api.php`
-- **Test Kullanıcı**: `api@turkpin.net`
-- **Test Şifre**: `@.nwjExrK4U5b_S@y`
-- **Dokümantasyon**: [https://dev.turkpin.com](https://dev.turkpin.com)
+Test API'sine erişebilmek için API isteklerini göndereceğiniz internet bağlantısının genel IP adresini aşağıdaki adrese gönderin:
 
-### Temel API Endpoints
-- Oyun listesi çekme
-- Oyuna ait ürün listesi çekme
-- Sipariş oluşturma
-- Sipariş durumu sorgulama
+`integration@turkpin.com`
 
-## Görevler ve Gereksinimler
+Whitelist işlemi tamamlandıktan sonra test API'sini kullanabilirsiniz.
 
-### Ana Gereksinimler
+## API Bilgileri
 
-#### 1. Oyun Listesi Entegrasyonu
-- Ana sayfadaki select dropdown'a API'dan oyun listesini yükleyin
-- Sayfa yüklendiğinde oyun listesi boş olmalı
-- Varsayılan seçenek: "Oyun Seçiniz" veya benzeri
+* **API URL:** `https://www.turkpin.net/api.php`
+* **Dokümantasyon:** https://dev.turkpin.com
 
-#### 2. Dinamik Ürün Listesi
-- Oyun seçildiğinde, seçilen oyuna ait ürünler API'dan çekilmeli
-- Ürün listesi mevcut tablo yapısında gösterilmeli
-- Oyun seçilmediğinde ürün listesi görünmemeli
+Test kullanıcı bilgileri dökümantasyonda yer almaktadır. Bu bilgileri kullanarak API isteklerinizi gerçekleştirebilirsiniz.
 
-#### 3. Sipariş Sistemi
-- Kullanıcıdan sipariş için gerekli bilgileri toplayın
-- API'ya sipariş gönderme fonksiyonunu implement edin
-- Form validasyonu ve hata kontrolü yapın
+> API kullanıcı bilgilerini kaynak kod içerisine, frontend tarafına veya commit geçmişine eklemeyin. Ortam değişkenleri veya uygun bir yapılandırma yöntemi kullanın.
 
-#### 4. Sonuç Gösterimi
-- Sipariş sonucunu modal dialog ile gösterin
-- Başarılı/başarısız durumları farklı stillerle gösterin
-- Sipariş detaylarını kullanıcıya sunun
+## Görevler
 
-### Teknik Gereksinimler
-- PHP OOP yaklaşımı kullanın
-- Mevcut proje yapısını koruyun
-- Responsive tasarım korunmalı
-- Çoklu dil desteği korunmalı
-- Error handling implement edin
-- Clean code principles uygulayın
+### 1. Oyun Listesi
+
+* Oyun listesini Turkpin API üzerinden alın.
+* Ana sayfadaki seçim alanında gösterin.
+* Başlangıçta herhangi bir oyun seçili olmamalıdır.
+* Varsayılan seçenek olarak `Oyun Seçiniz` veya benzeri bir ifade kullanılmalıdır.
+
+### 2. Ürün Listesi
+
+* Kullanıcı bir oyun seçtiğinde ilgili ürünleri API üzerinden alın.
+* Ürünleri mevcut tablo yapısında gösterin.
+* Oyun seçilmediğinde ürün listesi görünmemelidir.
+* Oyun değiştirildiğinde ürün listesi yeni seçime göre güncellenmelidir.
+
+### 3. Sipariş Sistemi
+
+* Kullanıcıdan sipariş için gerekli bilgileri alın.
+* Form doğrulaması uygulayın.
+* Siparişi backend üzerinden Turkpin API'sine gönderin.
+* Aynı siparişin yanlışlıkla birden fazla kez gönderilmesini önleyin.
+
+### 4. Sonuç Gösterimi
+
+* Sipariş sonucunu modal dialog ile gösterin.
+* Başarılı ve başarısız sonuçları farklı stillerle sunun.
+* Mevcut sipariş detaylarını kullanıcıya gösterin.
+* Hata durumlarında anlaşılır mesajlar kullanın.
+
+### 5. Sipariş Durumu
+
+Sipariş anlık olarak tamamlanmıyorsa durumunu belirli aralıklarla sorgulayın.
+
+* Gereksiz sıklıkta API isteği göndermeyin.
+* Maksimum deneme süresi veya sayısı belirleyin.
+* Sipariş sonuçlandığında sorgulamayı durdurun.
+* Başarısız, iptal edilmiş ve zaman aşımına uğramış durumları yönetin.
+
+## Teknik Gereksinimler
+
+* PHP OOP yaklaşımı kullanın.
+* Mevcut proje yapısını mümkün olduğunca koruyun.
+* Responsive tasarımı bozmayın.
+* Türkçe ve İngilizce dil desteğini koruyun.
+* İstemci ve sunucu tarafında doğrulama yapın.
+* API ve ağ hatalarını yönetin.
+* Hassas bilgileri kaynak kod içerisinde saklamayın.
+* Temiz ve anlaşılır kod yazın.
+* Eklediğiniz bağımlılıkların kullanım amacını açıklayabilin.
 
 ## Değerlendirme Kriterleri
 
-### Temel Kriterler (Zorunlu)
-- **Fonksiyonalite**: Tüm gereksinimler çalışıyor mu?
-- **API Entegrasyonu**: Doğru şekilde entegre edilmiş mi?
-- **Kullanıcı Deneyimi**: Akıcı ve anlaşılır mı?
-- **Hata Yönetimi**: Error handling uygulanmış mı?
+### Temel Kriterler
 
-### Kod Kalitesi Kriterleri
-- **Code Structure**: Temiz ve okunabilir kod
-- **Best Practices**: PHP ve JavaScript best practices
-- **Security**: Güvenlik önlemleri alınmış mı?
-- **Performance**: Performans optimizasyonları
+* İstenen özelliklerin çalışması
+* API entegrasyonunun doğru yapılması
+* Kullanıcı akışının anlaşılır olması
+* Hata senaryolarının ele alınması
 
-### Artı Değer Sağlayan Özellikler
-- **Problem Solving**: Mevcut kodda bulunan sorunların tespiti ve çözümü
-- **Geliştirme Ortamı**: Docker, scripts gibi geliştirme kolaylıkları
-- **Documentation**: Kapsamlı kod dokümantasyonu
-- **Testing**: Unit test veya integration test yazımı
+### Kod Kalitesi
 
-> **Not**: Projede mevcut bazı teknik eksiklikler ve iyileştirme alanları bulunmaktadır. Bunları keşfetmek ve çözmek değerlendirmede önemli artı puan sağlayacaktır.
+* Temiz ve okunabilir kod
+* Uygun sınıf ve servis yapısı
+* Güvenli veri işleme
+* Gereksiz API çağrılarının önlenmesi
+* Anlamlı commit geçmişi
 
-## Test Senaryoları
+### Artı Değer Sağlayan Çalışmalar
 
-### Temel Test Akışı
-1. Sayfa yüklendiğinde oyun listesi boş olmalı
-2. Oyun seçildiğinde ürünler yüklenmeli
-3. Ürün sipariş formu çalışmalı
-4. API yanıtları doğru işlenmeli
-5. Hata durumları uygun şekilde gösterilmeli
+Aşağıdaki çalışmalar zorunlu değildir ancak değerlendirmeye olumlu katkı sağlar:
 
-### API Test Senaryoları
-- Başarılı API çağrıları
-- Ağ hatası durumları
-- Geçersiz credentials
-- Rate limiting durumları
+* Mevcut projedeki sorunların tespit edilmesi ve düzeltilmesi
+* Docker veya kurulum scriptleri
+* Unit veya integration testleri
+* Loglama
+* Statik analiz veya kod formatlama araçları
+* Teknik kararların kısa şekilde dokümante edilmesi
 
-## Süreç ve Teslim
+> Projede bazı teknik eksiklikler ve iyileştirme alanları bulunabilir. Bunların tespit edilmesi ve doğru şekilde çözülmesi değerlendirmeye olumlu katkı sağlar.
 
-### Timeline
-- **Teslim Süresi**: Mail gönderiminden itibaren maksimum 5 iş günü
-- **Değerlendirme Süresi**: Teslim sonrası 2-3 iş günü
-- **Geri Bildirim**: Değerlendirme sonrası 1 iş günü içerisinde
+## Yapay Zekâ Kullanımıx
 
-### Teslim Süreci
-1. **Fork**: Bu repository'yi fork edin
-2. **Development**: Kendi fork'unuzda geliştirme yapın
-3. **Commit**: Anlamlı commit mesajları yazın
-4. **Pull Request**: Ana repository'ye PR gönderin
-5. **Bildirim**: PR linkini `integration@turkpin.com` adresine gönderin
+Yapay zekâ araçlarını aşağıdaki amaçlarla kullanabilirsiniz:
 
-### Commit Standartları
-### Format
+* Dokümantasyon araştırması
+* Hata mesajlarını yorumlama
+* Teknik konularda bilgi edinme
+* Alternatif çözüm yaklaşımlarını değerlendirme
+* Yazdığınız kodu gözden geçirme
 
-```
+Ancak projenin tamamının veya önemli bir bölümünün doğrudan yapay zekâya yazdırılması beklenmemektedir.
+
+Teslim ettiğiniz kodun:
+
+* Çalışma mantığını anlayabilmeniz
+* Teknik kararlarını açıklayabilmeniz
+* Hatalarını tespit edebilmeniz
+* Gerektiğinde değiştirebilmeniz
+
+beklenmektedir.
+
+Açıklayamadığınız veya çalışma mantığına hâkim olmadığınız kodlar değerlendirmeyi olumsuz etkileyebilir.
+
+## Commit Standartları
+
+Commit mesajlarının kısa, açık ve yapılan değişikliği anlatır nitelikte olması beklenmektedir.
+
+Tercih edilen format:
+
+```text
 (type) scope: description
 ```
 
-```
+Scope gerekmiyorsa:
+
+```text
 (type) description
 ```
 
-belki
+Type kullanılmayacaksa:
 
-```
+```text
 scope: description
 ```
 
-`type` ve `scope` alanları, değişikliği sınıflandırmak için kullanılır; `description` alanı ise değişikliği açıklar.
+### Kullanılabilecek Türler
+
+* `feat`: Yeni özellik
+* `fix`: Hata düzeltmesi
+* `docs`: Dokümantasyon değişikliği
+* `style`: Kod davranışını değiştirmeyen biçimlendirme
+* `refactor`: Kod yapısının düzenlenmesi
+* `perf`: Performans iyileştirmesi
+* `test`: Test ekleme veya güncelleme
+* `build`: Build veya bağımlılık değişiklikleri
+* `ci`: CI/CD değişiklikleri
+* `chore`: Genel bakım ve yapılandırma işleri
 
 ### Örnekler
 
-- `(chore) env: remove unused environment variables`
+```text
+(feat) api: add game list integration
+```
 
-- `(docs) readme: add setup instructions for Docker`
+```text
+(fix) order: prevent duplicate submissions
+```
 
-- `(feat) auth: add two-factor authentication`
+```text
+(docs) readme: add setup instructions
+```
 
-- `(fix) api: return correct status code on failure`
+```text
+(refactor) api: extract client service
+```
 
-- `(perf) db: cache user queries for faster lookup`
+```text
+(test) order: add validation tests
+```
 
-- `(refactor) router: remove unused route middleware`
+```text
+api: handle invalid credentials
+```
 
-- `(style) button: fix indentation and spacing`
+Aşağıdaki gibi belirsiz commit mesajlarından kaçının:
 
-- `(test) auth: add tests for token expiration`
+```text
+update
+fix
+changes
+final
+```
 
 ## Kaynaklar
 
@@ -213,19 +282,54 @@ scope: description
 
 ## Sık Sorulan Sorular
 
-### API ile İlgili
-**S: IP whitelist işlemi ne kadar sürer?**  
-C: Genellikle 1-2 iş günü içerisinde tamamlanır.
+**Projeyi tamamlayamazsam gönderebilir miyim?**
+Evet. Tamamladığınız bölümleri ve eksik kalan noktaları belirterek teslim edebilirsiniz.
 
-**S: Test API'si ile gerçek sipariş oluşur mu?**  
-C: Hayır, test ortamında gerçek işlem yapılmaz.
+**Pull request açmak zorunlu mu?**
+Hayır. Repository bağlantısını paylaşmanız yeterlidir.
 
-### Teknik Sorular
-**S: Mevcut kod yapısını değiştirebilir miyim?**  
-C: Evet, iyileştirmeler yapabilirsiniz ancak temel yapıyı koruyun.
+**Private repository kullanabilir miyim?**
+Evet. Ancak değerlendirme yapacak kişilere erişim vermeniz gerekir.
 
-**S: Ek kütüphane ekleyebilir miyim?**  
-C: Evet, gerekçeli olarak yeni bağımlılıklar ekleyebilirsiniz.
+**Ek kütüphane kullanabilir miyim?**
+Evet. Neden kullandığınızı açıklayabilmeniz beklenmektedir.
+
+**Docker veya test yazmak zorunlu mu?**
+Hayır. Ancak değerlendirmeye olumlu katkı sağlar.
+
+**Mevcut yapıyı değiştirebilir miyim?**
+Gerekli iyileştirmeleri yapabilirsiniz. Ancak projeyi tamamen farklı bir teknoloji veya framework ile yeniden yazmanız beklenmemektedir.
+
+**Yapay zekâ kullanabilir miyim?**
+Araştırma, hata analizi ve kod inceleme amacıyla kullanabilirsiniz. Ancak teslim ettiğiniz kodun tamamına hâkim olmanız beklenmektedir.
+
+## Süreç ve Teslim
+
+### Zamanlama
+
+* **Teslim Süresi:** Davet e-postasının gönderilmesinden itibaren en fazla 5 iş günü
+* **Değerlendirme Süresi:** Teslimden sonra 2-3 iş günü
+* **Geri Bildirim:** Değerlendirme tamamlandıktan sonra mümkün olan en kısa sürede
+
+Projenin tüm gereksinimlerinin tamamlanması tercih edilir ancak zorunlu değildir. Belirtilen süre içerisinde tüm görevleri tamamlayamazsanız, tamamladığınız bölümleri mevcut hâliyle teslim edebilirsiniz. Değerlendirme, gerçekleştirdiğiniz çalışmalar üzerinden yapılacaktır.
+
+### Teslim Süreci
+
+1. **Fork:** Bu repository'yi kendi GitHub hesabınıza fork edin.
+2. **Geliştirme:** Çalışmalarınızı kendi fork'unuz üzerinde gerçekleştirin.
+3. **Commit:** Değişikliklerinizi anlamlı commit mesajlarıyla kaydedin.
+4. **Pull Request:** Ana repository'ye bir pull request gönderin.
+5. **Bildirim:** Pull request bağlantısını `oktay@turkpin.com` adresine gönderin.
+
+### Teslim E-postasında Bulunması Gerekenler
+
+* Adınız ve soyadınız
+* Repository ve pull request bağlantısı
+* Tamamladığınız bölümlerin kısa özeti
+* Tamamlayamadığınız bölümler
+* Bilinen hata veya eksiklikler
+* Varsa ek kurulum adımları
+* Yapay zekâ araçlarını kullandıysanız hangi amaçlarla kullandığınız
 
 ## İletişim ve Destek
 
@@ -243,9 +347,9 @@ C: Evet, gerekçeli olarak yeni bağımlılıklar ekleyebilirsiniz.
 
 <p align="center">
   <strong>Bu proje Turkpin yazılım geliştirici işe alım sürecinin bir parçasıdır.</strong><br>
-  <em>Başarılar dileriz! </em>
+  <em>Başarılar dileriz!</em>
 </p>
 
 <p align="center">
-  <sub>© 2024 Turkpin. Tüm hakları saklıdır.</sub>
+  <sub>© 2026 Turkpin. Tüm hakları saklıdır.</sub>
 </p>
