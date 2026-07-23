@@ -148,7 +148,7 @@ composer install
 ## Süreç ve Teslim
 
 ### Timeline
-- **Teslim Süresi**: Mail gönderiminden itibaren maksimum 5 gün
+- **Teslim Süresi**: Mail gönderiminden itibaren maksimum 5 iş günü
 - **Değerlendirme Süresi**: Teslim sonrası 2-3 iş günü
 - **Geri Bildirim**: Değerlendirme sonrası 1 iş günü içerisinde
 
