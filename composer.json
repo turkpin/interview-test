@@ -1,14 +1,14 @@
 {
-	"name": "oktayaydogan/test-project",
+	"name": "turkpin/interview-test",
 	"autoload": {
 		"psr-4": {
-			"Oktayaydogan\\TestProject\\": "src/"
+			"Turkpin\\InterviewTest\\": "src/"
 		}
 	},
 	"authors": [
 		{
-			"name": "Oktay Aydoğan",
-			"email": "aydoganooktay@gmail.com"
+			"name": "Turkpin DEV Team",
+			"email": "devteam@turkpin.com"
 		}
 	],
 	"require": {
